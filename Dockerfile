@@ -17,7 +17,7 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Copia el archivo JAR de tu aplicación al directorio de trabajo
-COPY --from=build /app/target/myname-service-0.0.1-SNAPSHOT.jar .
+COPY --from=build /app/target/render-0.0.1-SNAPSHOT.jar .
 COPY --from=build /app/src/main/resources/application.properties .
 
 # Exponer el puerto que utilizará la aplicación
